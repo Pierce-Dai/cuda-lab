@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "WSL",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/usr/local/cuda/include"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "/usr/local/cuda/include"
+        ]
+      },
+      "compilerPath": "/usr/local/cuda/bin/nvcc",
+      "intelliSenseMode": "linux-gcc-x64"
+    }
+  ],
+  "version": 4
+}

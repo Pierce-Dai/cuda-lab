@@ -1,0 +1,4 @@
+.specstory/
+
+# Local CUDA build outputs
+00_env_check/vector_add

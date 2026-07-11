@@ -59,6 +59,12 @@
 - input size
 - GPU 型号
 
+## 运行环境规则
+
+- 我的 CUDA 开发和运行环境在 WSL 中。
+- 需要运行 `nvcc`、`nvidia-smi`、CUDA 可执行文件、Nsight/CUDA samples 时，应以 WSL 环境中的结果为准。
+- 如果 Codex 工具环境运行 CUDA 命令时出现 `CUDA driver version is insufficient for CUDA runtime version` 或 GPU 访问受限，不要直接判断我的 WSL CUDA 环境不可用；应让我在 WSL 终端运行并贴结果，或基于我贴出的 WSL 输出分析。
+
 ## Profiling 规则
 
 当我提供 Nsight Compute 或 benchmark 结果时，请帮我判断：

@@ -1,4 +1,6 @@
-.specstory/
+# Ignore all hidden directories, such as .vscode/, .github/, .specstory/.
+.*/
+**/.*/
 
 # Local CUDA build outputs
 00_env_check/vector_add

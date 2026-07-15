@@ -4,3 +4,4 @@
 
 # Local CUDA build outputs
 00_env_check/vector_add
+01_cuda_programming_model/vector-addition

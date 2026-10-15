@@ -1,3 +1,17 @@
+// 原仓库 https://github.com/CoffeeBeforeArch/cuda_programming
+// 中的文件在baseline的基础做了优化，包括：
+/*
+ * 目录                  主要区别                          解决的问题
+ * baseline              朴素矩阵乘法                      建立基准实现
+ * noAliasing/tmp        使用局部变量累加                  减少对全局内存 C 的访问
+ * noAliasing/restrict   给指针添加 __restrict__           告诉编译器三个矩阵不重叠
+ * tiled                 使用共享内存分块                  复用矩阵数据，显著减少全局内存读取
+ * rectangular           支持 M, N, K 不相等               处理矩形矩阵
+ * nonMultiple           尺寸不是 32 的倍数                处理不完整的边缘 tile
+ *
+ * 本代码只做了baseline，其他优化后续再实现
+ */
+
 #include <iostream>
 #include <vector>
 #include <cassert>

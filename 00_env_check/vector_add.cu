@@ -5,16 +5,7 @@
 #include <chrono>
 #include <cstdio>
 #include <iomanip>
-
-#define CHECK_CUDA(call) do { \
-    cudaError_t err = (call); \
-    if (err != cudaSuccess) { \
-        std::cerr << "CUDA error at " << __FILE__ << ":" << __LINE__ \
-                  << ", call: " << #call \
-                  << ", message: " << cudaGetErrorString(err) << std::endl; \
-        exit(EXIT_FAILURE); \
-    } \
-} while(0)
+#include "../utils.h"
 
 __global__ void vectorAdd(const float* A, const float* B, float* C, int N) {
     int i = blockIdx.x * blockDim.x + threadIdx.x;
